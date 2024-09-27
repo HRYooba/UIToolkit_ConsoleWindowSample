@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Sample/UI/Uss/ConsoleWindow.uss?fileID=7433441132597879392&amp;guid=b565a611d4a6e9b4aaa0cd8b83d9221d&amp;type=3#ConsoleWindow" />
+    <ui:VisualElement name="button-container" style="flex-direction: row; align-items: center; justify-content: space-around; height: 35px;">
+        <ui:Button text="Clear" parse-escape-sequences="true" display-tooltip-when-elided="true" name="clear-button" class="button" />
+        <ui:Button text="0" parse-escape-sequences="true" display-tooltip-when-elided="true" name="log-button" class="button">
+            <ui:VisualElement name="log-icon" style="background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2346436936791262179&amp;guid=df2a1564b08095d499fc74ec2b87fabd&amp;type=3#console.infoicon&quot;); width: 20px; height: 20px; left: 5%;" />
+        </ui:Button>
+        <ui:Button text="0" parse-escape-sequences="true" display-tooltip-when-elided="true" name="warning-button" class="button">
+            <ui:VisualElement name="warning-icon" style="background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=4584671053970592468&amp;guid=df2a1564b08095d499fc74ec2b87fabd&amp;type=3#console.warnicon&quot;); width: 20px; height: 20px; left: 5%;" />
+        </ui:Button>
+        <ui:Button text="0" parse-escape-sequences="true" display-tooltip-when-elided="true" name="error-button" class="button">
+            <ui:VisualElement name="error-icon" style="background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=8228938214290033325&amp;guid=df2a1564b08095d499fc74ec2b87fabd&amp;type=3#console.erroricon&quot;); width: 20px; height: 20px; left: 5%;" />
+        </ui:Button>
+    </ui:VisualElement>
+    <ui:ListView name="message-list" fixed-item-height="50" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-grow: 1;" />
+</ui:UXML>
