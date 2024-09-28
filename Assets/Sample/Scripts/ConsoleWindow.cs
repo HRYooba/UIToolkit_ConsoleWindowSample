@@ -49,7 +49,7 @@ public class ConsoleWindow : MonoBehaviour
         _messageListScroller = _messageListView.Q<Scroller>();
 
         // setup buttons
-        _clearButton.clicked += OnClearButtonClick;
+        _clearButton.clicked += OnClearButtonClicked;
 
         // setup logListView
         _messageListView.itemsSource = _messages;
@@ -119,7 +119,7 @@ public class ConsoleWindow : MonoBehaviour
         UpdateView();
     }
 
-    private void OnClearButtonClick()
+    private void OnClearButtonClicked()
     {
         _messages.Clear();
         UpdateView();
