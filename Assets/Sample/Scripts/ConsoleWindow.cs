@@ -54,7 +54,7 @@ public class ConsoleWindow : MonoBehaviour
         // setup logListView
         _messageListView.itemsSource = _messages;
         _messageListView.makeItem = () => _messageItemTemplate.Instantiate();
-        _messageListView.bindItem = OnItemBind;
+        _messageListView.bindItem = BindItem;
 
         // setup scroller
         _messageListScroller.value = _messageListScroller.highValue;
@@ -93,19 +93,7 @@ public class ConsoleWindow : MonoBehaviour
         }
     }
 
-    private void OnLogMessageReceived(string condition, string stackTrace, LogType type)
-    {
-        _messages.Add((DateTime.Now.ToString("HH:mm:ss"), condition, stackTrace, type));
-        UpdateView();
-    }
-
-    private void OnClearButtonClick()
-    {
-        _messages.Clear();
-        UpdateView();
-    }
-
-    private void OnItemBind(VisualElement element, int index)
+    private void BindItem(VisualElement element, int index)
     {
         var (timeCode, condition, stackTrace, type) = _messages[index];
 
@@ -123,5 +111,17 @@ public class ConsoleWindow : MonoBehaviour
             LogType.Exception => _errorIcon,
             _ => throw new ArgumentOutOfRangeException()
         };
+    }
+
+    private void OnLogMessageReceived(string condition, string stackTrace, LogType type)
+    {
+        _messages.Add((DateTime.Now.ToString("HH:mm:ss"), condition, stackTrace, type));
+        UpdateView();
+    }
+
+    private void OnClearButtonClick()
+    {
+        _messages.Clear();
+        UpdateView();
     }
 }
