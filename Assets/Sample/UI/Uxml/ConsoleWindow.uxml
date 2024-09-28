@@ -12,5 +12,5 @@
             <ui:VisualElement name="error-icon" style="background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=8228938214290033325&amp;guid=df2a1564b08095d499fc74ec2b87fabd&amp;type=3#console.erroricon&quot;); width: 20px; height: 20px; left: 5%;" />
         </ui:Button>
     </ui:VisualElement>
-    <ui:ListView name="message-list" fixed-item-height="50" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-grow: 1;" />
+    <ui:ListView name="message-list" fixed-item-height="50" style="flex-grow: 1;" />
 </ui:UXML>
